@@ -89,7 +89,6 @@ fun hashMapExample() {
 
     linkedHashMapMapData
             .entries
-            .stream()
             .forEach { data ->
                 println("${data.key} ->  ${data.value}")
             }
@@ -100,7 +99,6 @@ fun hashMapExample() {
     hashMapMapData.put(3,3)
     hashMapMapData
             .entries
-            .stream()
             .forEach { data ->
                 println("${data.key} ->  ${data.value}")
             }
