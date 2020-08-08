@@ -68,6 +68,7 @@ fun main() {
     println("---------------------Sealed Class----------------")
     val entityMediator: EntityMediator = EntityMediator()
     val entityComponent1: EntityComponent = entityMediator.createComponent(PolicyType.TP)
+    val entityComponent4: EntityComponent = entityMediator.createComponent(PolicyType.TP)
     val entityComponent2: EntityComponent = entityMediator.createComponent(PolicyType.OD)
     val entityComponent3: EntityComponent = entityMediator.createComponent(PolicyType.COMPREHENSIVE)
     println()
@@ -75,6 +76,8 @@ fun main() {
     printTheDetails(entityComponent2);
     printTheDetails(entityComponent3);
 
+    println("${entityComponent1 == entityComponent4}")
+    println("${entityComponent1 === entityComponent4}")
 
 }
 
