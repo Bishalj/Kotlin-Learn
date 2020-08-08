@@ -106,7 +106,7 @@ fun hashMapExample() {
     var treeSet: TreeSet<Int> = TreeSet<Int>();
 }
 
-fun listExample() {
+private fun listExample() {
     val listData: MutableList<Int> = mutableListOf();
     val immutableList: List<Int> = listData
     listData.add(1);
@@ -147,4 +147,25 @@ private fun arrayExample() {
 
     var arrayData2: IntArray = intArrayOf(1,2,3,4,5,6);
     println(arrayData2[4])
+    println("-----------One")
+    for (aValue in arrayData2){
+        print("${aValue} ")
+    }
+    println()
+    println("-----------Two")
+    arrayData2.forEach {
+        print("${it} ")
+    }
+    println()
+    println("-----------Three")
+    for((index, value) in arrayData2.withIndex())
+        println("$index -> $value")
+
+    println("-----------four")
+    arrayData2
+            .forEachIndexed { index, value ->
+                println("$index -> $value")
+            }
+
+
 }
