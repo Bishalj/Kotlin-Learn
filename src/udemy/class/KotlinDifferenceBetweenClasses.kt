@@ -10,6 +10,7 @@ fun main(){
   println(normalClass2)
   println(normalClass1 == normalClass2)
 
+  
 
   var dataClass1: DataClass = DataClass("Bishal")
   var dataClass2: DataClass = DataClass("Bishal")
