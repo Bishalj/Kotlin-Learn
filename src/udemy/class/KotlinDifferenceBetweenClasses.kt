@@ -1,5 +1,7 @@
 package udemy.`class`
 
+import java.util.function.Supplier
+
 class NormalClass(val name: String)
 data class DataClass(val name: String)
 
@@ -9,8 +11,6 @@ fun main(){
   println(normalClass1)
   println(normalClass2)
   println(normalClass1 == normalClass2)
-
-  
 
   var dataClass1: DataClass = DataClass("Bishal")
   var dataClass2: DataClass = DataClass("Bishal")
