@@ -1,7 +1,5 @@
 package demo.input_output
 
-import com.sun.org.apache.xpath.internal.operations.Bool
-
 fun main(){
     var a = readLine()
     var b = readLine()?.toInt()
