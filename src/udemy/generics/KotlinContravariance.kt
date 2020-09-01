@@ -12,7 +12,7 @@ interface FLowersCare<in T> {
 	}
 }
 
-open class Flowers{}
+open class Flowers(){}
 
 class RoseFlower: Flowers()
 class DaisyFlower: Flowers()
@@ -35,14 +35,10 @@ fun main(){
 //				println("I am prunning a Daisy")
 //			}
 //		}
-			var flowerTender = object: FLowersCare<Flowers> {
-			override fun prune(flower: Flowers) {
-				println("I am prunning a Daisy")
-			}
-		}
+			var flowerTender = object: FLowersCare<Flowers> {}
 
 		var roseGarden = Gardens<RoseFlower>(listOf(RoseFlower(), RoseFlower(), RoseFlower()), flowerTender)
-//		var daisyGarden = Gardens<DaisyFlower>(listOf(DaisyFlower(), DaisyFlower(), DaisyFlower()), daisyTender)
+		var daisyGarden = Gardens<DaisyFlower>(listOf(DaisyFlower(), DaisyFlower(), DaisyFlower()), flowerTender)
 		roseGarden.prunning(2)
-//		daisyGarden.prunning(1)
+		daisyGarden.prunning(1)
 }
